@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="168dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginBottom="332dp"
+        android:layout_weight="1"
+        android:background="@color/black"
+        android:entries="@array/coding"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/coding"
+        app:layout_constraintTop_toBottomOf="@+id/spinner1" />
+
+    <Button
+        android:id="@+id/coding"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="341dp"
+        android:layout_weight="1"
+        android:background="@color/black"
+        android:gravity="center_horizontal"
+        android:text="Перекодировать"
+        android:textAlignment="center"
+        android:textSize="30px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/spinner2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chooseFile"
+        app:layout_constraintVertical_bias="0.36"></Button>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:gravity="center_horizontal"
+        android:paddingTop="20px"
+        android:text="Текст в кодировке UTF-8:"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30px"
+        app:layout_constraintBottom_toTopOf="@+id/inputUtf8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <Button
+        android:id="@+id/convertToUtf16"
+        android:layout_width="190dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginEnd="111dp"
+        android:layout_marginRight="111dp"
+        android:gravity="center_horizontal"
+        android:text="UTF-8"
+        android:textAlignment="center"
+        android:textSize="30px"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputUtf8"></Button>
+
+    <EditText
+        android:id="@+id/inputUtf8"
+        android:layout_width="match_parent"
+        android:layout_height="14dp"
+        android:textSize="30px"
+        android:background="@color/black"
+
+        app:layout_constraintBottom_toTopOf="@+id/convertToUtf16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"></EditText>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:gravity="center_horizontal"
+        android:paddingTop="20px"
+        android:text="Текст UTF-16"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30px"
+        app:layout_constraintBottom_toTopOf="@+id/inputUtf16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultConvertUtf816"></TextView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:gravity="center_horizontal"
+        android:paddingTop="20px"
+        android:text="Текст в кодировке UTF-16:"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30px"
+        app:layout_constraintBottom_toTopOf="@+id/resultConvertUtf816"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/convertToUtf16"></TextView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:gravity="center_horizontal"
+        android:text="Текст UTF-8"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30px"
+        app:layout_constraintBottom_toTopOf="@+id/resultConvertUtf168"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/convertToUtf8"></TextView>
+
+    <EditText
+        android:id="@+id/resultConvertUtf816"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"></EditText>
+
+    <EditText
+        android:id="@+id/resultConvertUtf168"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="437dp"
+        android:textSize="30px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/textView"></EditText>
+
+    <EditText
+        android:id="@+id/inputUtf16"
+        android:layout_width="match_parent"
+        android:layout_height="14dp"
+        android:textSize="30px"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/convertToUtf8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"></EditText>
+
+    <Button
+        android:id="@+id/convertToUtf8"
+        android:layout_width="189dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
+        android:layout_marginEnd="111dp"
+        android:layout_marginRight="111dp"
+        android:gravity="center_horizontal"
+        android:text="UTF-16"
+        android:textAlignment="center"
+        android:textSize="30px"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputUtf16"></Button>
+
+    <Button
+        android:id="@+id/chooseFile"
+        android:layout_width="181dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:text="Выбор файла"
+        android:textAlignment="center"
+        android:textSize="30px"
+        app:layout_constraintEnd_toStartOf="@+id/spinner1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultConvertUtf168"></Button>
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="163dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginBottom="17dp"
+        android:layout_weight="1"
+        android:background="@color/black"
+        android:entries="@array/coding"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/spinner2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chooseFile"
+        app:layout_constraintTop_toBottomOf="@+id/resultConvertUtf168" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
